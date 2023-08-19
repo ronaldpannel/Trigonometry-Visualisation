@@ -39,27 +39,52 @@ function update() {
 
   drawLine(A, B);
   drawText("c", average(A, B));
-  drawLine(A, C, 'blue');
-  drawText("b", average(A, C), 'blue');
-  drawLine(B, C, 'red');
-  drawText("a", average(C, B), 'red');
+  drawLine(A, C, "blue");
+  drawText("b", average(A, C), "blue");
+  drawLine(B, C, "red");
+  drawText("a", average(C, B), "red");
 
   drawText("0", A);
 
-  drawText("sin = a/c =" + sin.toFixed(2), {
-    x: -offset.x / 2,
-    y: offset.y * 0.7
-  }, 'red');
+  drawText("a = " + Math.round(a), {
+    x: offset.x / 2,
+    y: -offset.y * 0.9,
+  });
+  drawText("b = " + Math.round(b), {
+    x: offset.x / 2,
+    y: -offset.y * 0.8,
+  });
+  drawText("c = " + Math.round(c), {
+    x: offset.x / 2,
+    y: -offset.y * 0.7,
+  });
 
-  drawText("cos = b/c =" + cos.toFixed(2), {
-    x: -offset.x / 2,
-    y: offset.y * 0.8,
-  }, 'blue');
+  drawText(
+    "sin = a/c = " + sin.toFixed(2),
+    {
+      x: -offset.x / 2,
+      y: offset.y * 0.7,
+    },
+    "red"
+  );
 
-  drawText("tan = a/b =" + tan.toFixed(2), {
-    x: -offset.x / 2,
-    y: offset.y * 0.9
-  }, 'magenta');
+  drawText(
+    "cos = b/c = " + cos.toFixed(2),
+    {
+      x: -offset.x / 2,
+      y: offset.y * 0.8,
+    },
+    "blue"
+  );
+
+  drawText(
+    "tan = a/b = " + tan.toFixed(2),
+    {
+      x: -offset.x / 2,
+      y: offset.y * 0.9,
+    },
+    "magenta"
+  );
   drawText(
     "0 = " +
       theta.toFixed(2) +
@@ -69,17 +94,17 @@ function update() {
     { x: offset.x / 2, y: offset.y * 0.7 }
   );
 
-  drawText('a = opposite',{x:-offset.x/2, y:-offset.y*0.9})
-  drawText('b = adjacent',{x:-offset.x/2, y:-offset.y*0.8})
-  drawText('c = hypotenuse',{x:-offset.x/2 + 10, y:-offset.y*0.7})
-  drawText('0 = theta',{x:-offset.x/2 -18, y:-offset.y*0.6})
+  drawText("a = opposite", { x: -offset.x / 2, y: -offset.y * 0.9 });
+  drawText("b = adjacent", { x: -offset.x / 2, y: -offset.y * 0.8 });
+  drawText("c = hypotenuse", { x: -offset.x / 2 + 10, y: -offset.y * 0.7 });
+  drawText("0 = theta", { x: -offset.x / 2 - 18, y: -offset.y * 0.6 });
 
   // drawPoint(A);
   // drawText("A", A);
   // drawPoint(B);
-  // drawText("B", B);
-  // drawPoint(C);
-  // drawText("C", C);
+  //  drawText("B", B);
+  //  drawPoint(C);
+  //  drawText("C", C);
 
   drawCoordinates(offset);
   ctx.beginPath();
