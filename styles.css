@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: o;
+    box-sizing: border-box;
+}
+body{
+   background-color: black;
+   overflow: hidden;
+}
+
+.canvas1{
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    border: 1px solid white;
+    max-width: 100%;
+    max-height: 100%;
+}
